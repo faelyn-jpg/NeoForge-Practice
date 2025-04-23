@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                             .displayItems((itemDisplayParameters, output) -> {
                                 output.accept(ModItems.BISMUTH);
                                 output.accept(ModItems.RAW_BISMUTH);
+                                output.accept(ModItems.CHISEL);
                             }).build());
     public static final Supplier<CreativeModeTab> BISMUTH_BLOCKS_TAB = CREATIVE_MODE_TAB.register("bismuth_blocks_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.BISMUTH_BLOCK.get()))
@@ -30,6 +31,7 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.BISMUTH_BLOCK);
                         output.accept(ModBlocks.BISMUTH_ORE);
+                        output.accept(ModBlocks.BISMUTH_DEEPSLATE_ORE);
                     }).build());
 
     public static void register(IEventBus eventBus) {

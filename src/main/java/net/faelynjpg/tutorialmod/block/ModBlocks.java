@@ -33,6 +33,12 @@ public class ModBlocks {
                             .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse("tutorialmod:bismuth_ore")))
                             .strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
+    public static final DeferredBlock<DropExperienceBlock> BISMUTH_DEEPSLATE_ORE = registerBlock("bismuth_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 6),
+                    BlockBehaviour.Properties.of()
+                            .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse("tutorialmod:bismuth_deepslate_ore")))
+                            .strength(3f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
