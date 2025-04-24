@@ -1,6 +1,7 @@
 package net.faelynjpg.tutorialmod.block;
 
 import net.faelynjpg.tutorialmod.TutorialMod;
+import net.faelynjpg.tutorialmod.block.custom.MagicBlock;
 import net.faelynjpg.tutorialmod.item.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -38,6 +39,11 @@ public class ModBlocks {
                     BlockBehaviour.Properties.of()
                             .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse("tutorialmod:bismuth_deepslate_ore")))
                             .strength(3f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            () -> new MagicBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse("tutorialmod:magic_block")))
+                    .strength(2f).requiresCorrectToolForDrops()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
