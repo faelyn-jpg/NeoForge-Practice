@@ -5,17 +5,23 @@ import net.faelynjpg.tutorialmod.item.custom.ChiselItem;
 import net.faelynjpg.tutorialmod.item.custom.FuelItem;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemUseAnimation;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TutorialMod.MOD_ID);
@@ -25,24 +31,37 @@ public class ModItems {
 
     public static final DeferredItem<Item> CHISEL = ITEMS.registerItem("chisel", ChiselItem::new, new Item.Properties().durability(32));
 
-    public static final DeferredItem<Item> RADISH = ITEMS.registerItem("radish", Item::new, new Item.Properties()
-            .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "radish")))
-            .food(ModFoodProperties.RADISH)
-            .component(
-                    DataComponents.CONSUMABLE,
-                    Consumable.builder()
-                            .consumeSeconds(2f)
-                            .animation(ItemUseAnimation.EAT)
-                            .hasConsumeParticles(false)
-                            .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 600), 0.35f))
-                            .build()
-            ));
+    public static final DeferredItem<Item> RADISH = ITEMS.registerItem("radish",
+            (props) -> new Item(props) {
+                @Override
+                public void appendHoverText(@NotNull ItemStack stack,
+                                            @NotNull TooltipContext context,
+                                            @NotNull List<Component> tooltipComponents,
+                                            @NotNull TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.tutorialmod.radish.tooltip"));
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            },
+            new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "radish")))
+                    .food(ModFoodProperties.RADISH)
+                    .component(
+                            DataComponents.CONSUMABLE,
+                            Consumable.builder()
+                                    .consumeSeconds(2f)
+                                    .animation(ItemUseAnimation.EAT)
+                                    .hasConsumeParticles(false)
+                                    .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 600), 0.35f))
+                                    .build()
+                    ));
 
     public static final DeferredItem<Item> FROSTFIRE_ICE = ITEMS.registerItem("frostfire_ice", (props) -> new FuelItem(props, 200), new Item.Properties()
             .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "frostfire_ice")))
     );
 
     public static final DeferredItem<Item> STARLIGHT_ASHES = ITEMS.registerItem("starlight_ashes", Item::new, new Item.Properties());
+
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
