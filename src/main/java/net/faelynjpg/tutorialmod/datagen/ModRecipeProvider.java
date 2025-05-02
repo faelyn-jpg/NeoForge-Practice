@@ -1,12 +1,18 @@
 package net.faelynjpg.tutorialmod.datagen;
 
+import net.faelynjpg.tutorialmod.TutorialMod;
 import net.faelynjpg.tutorialmod.block.ModBlocks;
 import net.faelynjpg.tutorialmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.crafting.AbstractCookingRecipe;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
-
+import net.minecraft.world.item.crafting.BlastingRecipe;
+import net.minecraft.world.item.crafting.SmeltingRecipe;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -38,6 +44,28 @@ public class ModRecipeProvider extends RecipeProvider {
 
         oreSmelting(BISMUTH_SMELTABLES, RecipeCategory.MISC, ModItems.BISMUTH.get(), 0.25f, 200, "bismuth");
         oreBlasting(BISMUTH_SMELTABLES, RecipeCategory.MISC, ModItems.BISMUTH.get(), 0.25f, 100, "bismuth");
+
+
+    }
+    //helper methods so recipes save under tutorialmod instead of minecraft
+    protected void oreSmelting(@NotNull List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult,
+                               float pExperience, int pCookingTIme, @NotNull String pGroup) {
+        oreCooking(RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new, pIngredients, pCategory, pResult,
+                pExperience, pCookingTIme, pGroup, "_from_smelting");
     }
 
+    protected void oreBlasting(@NotNull List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult,
+                               float pExperience, int pCookingTime, @NotNull String pGroup) {
+        oreCooking(RecipeSerializer.BLASTING_RECIPE, BlastingRecipe::new, pIngredients, pCategory, pResult,
+                pExperience, pCookingTime, pGroup, "_from_blasting");
+    }
+
+    protected <T extends AbstractCookingRecipe> void oreCooking(@NotNull RecipeSerializer<T> pCookingSerializer, AbstractCookingRecipe.@NotNull Factory<T> factory,
+                                                                List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult, float pExperience, int pCookingTime, @NotNull String pGroup, @NotNull String pRecipeName) {
+        for(ItemLike itemlike : pIngredients) {
+            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pCookingSerializer, factory).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
+                    .save(this.output, TutorialMod.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
+        }
+
+}
 }

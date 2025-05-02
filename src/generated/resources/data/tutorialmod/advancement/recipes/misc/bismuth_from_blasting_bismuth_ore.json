@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:bismuth_from_smelting_bismuth_ore"
+        "recipe": "tutorialmod:bismuth_from_blasting_bismuth_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:bismuth_from_smelting_bismuth_ore"
+      "tutorialmod:bismuth_from_blasting_bismuth_ore"
     ]
   }
 }
