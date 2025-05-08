@@ -21,10 +21,28 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BISMUTH_BLOCK.get())
                 .add(ModBlocks.BISMUTH_ORE.get())
                 .add(ModBlocks.BISMUTH_DEEPSLATE_ORE.get())
-                .add(ModBlocks.MAGIC_BLOCK.get());
-
+                .add(ModBlocks.MAGIC_BLOCK.get())
+                .add(ModBlocks.BISMUTH_SLAB.get())
+                .add(ModBlocks.BISMUTH_STAIRS.get())
+                .add(ModBlocks.BISMUTH_DOOR.get())
+                .add(ModBlocks.BISMUTH_TRAPDOOR.get())
+                .add(ModBlocks.BISMUTH_PRESSURE_PLATE.get())
+                .add(ModBlocks.BISMUTH_BUTTON.get());
+        tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.BISMUTH_FENCE.get());
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.BISMUTH_DEEPSLATE_ORE.get());
+                .add(ModBlocks.BISMUTH_DEEPSLATE_ORE.get())
+                .add(ModBlocks.BISMUTH_BLOCK.get())
+                .add(ModBlocks.BISMUTH_ORE.get())
+                .add(ModBlocks.BISMUTH_DEEPSLATE_ORE.get())
+                .add(ModBlocks.MAGIC_BLOCK.get())
+                .add(ModBlocks.BISMUTH_SLAB.get())
+                .add(ModBlocks.BISMUTH_STAIRS.get())
+                .add(ModBlocks.BISMUTH_DOOR.get())
+                .add(ModBlocks.BISMUTH_TRAPDOOR.get())
+                .add(ModBlocks.BISMUTH_PRESSURE_PLATE.get())
+                .add(ModBlocks.BISMUTH_FENCE.get())
+                .add(ModBlocks.BISMUTH_BUTTON.get());
 
         tag(BlockTags.FENCES)
                 .add(ModBlocks.BISMUTH_FENCE.get());
