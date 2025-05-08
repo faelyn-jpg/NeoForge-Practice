@@ -12,6 +12,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
+
 public class ModItemTagProvider extends ItemTagsProvider {
 
 
@@ -27,5 +28,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.COAL)
                 .add(Items.STICK)
                 .add(Items.COMPASS);
+
     }
 }

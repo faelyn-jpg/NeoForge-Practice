@@ -48,4 +48,5 @@ public class DataGenerators {
         event.createProvider(ModDataMapProvider::new);
     }
 
+
 }
