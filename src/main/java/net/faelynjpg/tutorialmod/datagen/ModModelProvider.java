@@ -51,23 +51,36 @@ public class ModModelProvider extends ModelProvider {
         blockModels.familyWithExistingFullBlock(BISMUTH_BLOCK).fenceGate(ModBlocks.BISMUTH_FENCE_GATE.get());
         blockModels.familyWithExistingFullBlock(BISMUTH_BLOCK).wall(ModBlocks.BISMUTH_WALL.get());
 
-        Block BISMUTH_DOOR = ModBlocks.BISMUTH_DOOR.get();
-        TextureMapping bismuth_door_texturemapping = TextureMapping.door(BISMUTH_DOOR);
-        blockModels.registerSimpleFlatItemModel(BISMUTH_DOOR.asItem());
-        blockModels.blockStateOutput.accept(
-                createDoor(ModBlocks.BISMUTH_DOOR.get(), ModelTemplates.DOOR_BOTTOM_LEFT.extend().renderType("minecraft:cutout").build().create(BISMUTH_DOOR, bismuth_door_texturemapping, blockModels.modelOutput), ModelTemplates.DOOR_BOTTOM_LEFT_OPEN.extend().renderType("minecraft:cutout").build().create(BISMUTH_DOOR, bismuth_door_texturemapping, blockModels.modelOutput), ModelTemplates.DOOR_BOTTOM_RIGHT.extend().renderType("minecraft:cutout").build().create(BISMUTH_DOOR, bismuth_door_texturemapping, blockModels.modelOutput), ModelTemplates.DOOR_BOTTOM_RIGHT_OPEN.extend().renderType("minecraft:cutout").build().create(BISMUTH_DOOR, bismuth_door_texturemapping, blockModels.modelOutput), ModelTemplates.DOOR_TOP_LEFT.extend().renderType("minecraft:cutout").build().create(BISMUTH_DOOR, bismuth_door_texturemapping, blockModels.modelOutput), ModelTemplates.DOOR_TOP_LEFT_OPEN.extend().renderType("minecraft:cutout").build().create(BISMUTH_DOOR, bismuth_door_texturemapping, blockModels.modelOutput),ModelTemplates.DOOR_TOP_RIGHT.extend().renderType("minecraft:cutout").build().create(BISMUTH_DOOR, bismuth_door_texturemapping, blockModels.modelOutput), ModelTemplates.DOOR_TOP_RIGHT_OPEN.extend().renderType("minecraft:cutout").build().create(BISMUTH_DOOR, bismuth_door_texturemapping, blockModels.modelOutput)));
-        Block BISMUTH_TRAPDOOR = ModBlocks.BISMUTH_TRAPDOOR.get();
+        doorWithRenderType(blockModels, ModBlocks.BISMUTH_DOOR.get());
+        trapdoorWithRenderType(blockModels, ModBlocks.BISMUTH_TRAPDOOR.get());
 
-        TextureMapping bismuth_trapdoor_texturemapping = TextureMapping.defaultTexture(BISMUTH_TRAPDOOR);
-        ResourceLocation bismuthtrapdoorresourcelocation = ModelTemplates.ORIENTABLE_TRAPDOOR_TOP.extend().renderType("minecraft:cutout").build().create(BISMUTH_TRAPDOOR, bismuth_trapdoor_texturemapping, blockModels.modelOutput);
-        ResourceLocation bismuthtrapdoorresourcelocation1 = ModelTemplates.ORIENTABLE_TRAPDOOR_BOTTOM.extend().renderType("minecraft:cutout").build().create(BISMUTH_TRAPDOOR, bismuth_trapdoor_texturemapping, blockModels.modelOutput);
-        ResourceLocation bismuthtrapdoorresourcelocation2 = ModelTemplates.ORIENTABLE_TRAPDOOR_OPEN.extend().renderType("minecraft:cutout").build().create(BISMUTH_TRAPDOOR, bismuth_trapdoor_texturemapping, blockModels.modelOutput);
-        blockModels.registerSimpleItemModel(BISMUTH_TRAPDOOR, bismuthtrapdoorresourcelocation1);
-        blockModels.blockStateOutput.accept(createOrientableTrapdoor(BISMUTH_TRAPDOOR, bismuthtrapdoorresourcelocation, bismuthtrapdoorresourcelocation1, bismuthtrapdoorresourcelocation2));
 
     }
 
+    private void doorWithRenderType(BlockModelGenerators blockModels, Block block) {
+        TextureMapping texturemapping = TextureMapping.door(block);
+        blockModels.registerSimpleFlatItemModel(block.asItem());
+        blockModels.blockStateOutput.accept(
+                createDoor(ModBlocks.BISMUTH_DOOR.get(), ModelTemplates.DOOR_BOTTOM_LEFT.extend().renderType("minecraft:cutout").build().create(block, texturemapping, blockModels.modelOutput),
+                        ModelTemplates.DOOR_BOTTOM_LEFT_OPEN.extend().renderType("minecraft:cutout").build().create(block, texturemapping, blockModels.modelOutput),
+                        ModelTemplates.DOOR_BOTTOM_RIGHT.extend().renderType("minecraft:cutout").build().create(block, texturemapping, blockModels.modelOutput),
+                        ModelTemplates.DOOR_BOTTOM_RIGHT_OPEN.extend().renderType("minecraft:cutout").build().create(block, texturemapping, blockModels.modelOutput),
+                        ModelTemplates.DOOR_TOP_LEFT.extend().renderType("minecraft:cutout").build().create(block, texturemapping, blockModels.modelOutput),
+                        ModelTemplates.DOOR_TOP_LEFT_OPEN.extend().renderType("minecraft:cutout").build().create(block, texturemapping, blockModels.modelOutput),
+                        ModelTemplates.DOOR_TOP_RIGHT.extend().renderType("minecraft:cutout").build().create(block, texturemapping, blockModels.modelOutput),
+                        ModelTemplates.DOOR_TOP_RIGHT_OPEN.extend().renderType("minecraft:cutout").build().create(block, texturemapping, blockModels.modelOutput)));
 
+    }
+
+    private void trapdoorWithRenderType(BlockModelGenerators blockModels, Block block) {
+        TextureMapping texturemapping = TextureMapping.defaultTexture(block);
+        ResourceLocation resourcelocation = ModelTemplates.ORIENTABLE_TRAPDOOR_TOP.extend().renderType("minecraft:cutout").build().create(block, texturemapping, blockModels.modelOutput);
+        ResourceLocation resourcelocation1 = ModelTemplates.ORIENTABLE_TRAPDOOR_BOTTOM.extend().renderType("minecraft:cutout").build().create(block, texturemapping, blockModels.modelOutput);
+        ResourceLocation resourcelocation2 = ModelTemplates.ORIENTABLE_TRAPDOOR_OPEN.extend().renderType("minecraft:cutout").build().create(block, texturemapping, blockModels.modelOutput);
+        blockModels.registerSimpleItemModel(block, resourcelocation1);
+        blockModels.blockStateOutput.accept(createOrientableTrapdoor(block, resourcelocation, resourcelocation1, resourcelocation2));
+
+    }
 
 
 

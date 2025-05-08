@@ -46,6 +46,7 @@ public class DataGenerators {
                 output, lookupProvider, blockTagsProvider.contentsGetter()
         ));
         event.createProvider(ModDataMapProvider::new);
+        event.createProvider(ModLanguageProvider::new);
     }
 
 
