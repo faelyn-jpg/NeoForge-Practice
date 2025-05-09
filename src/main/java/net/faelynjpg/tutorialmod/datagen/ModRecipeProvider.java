@@ -48,8 +48,6 @@ public class ModRecipeProvider extends RecipeProvider {
         stairBuilder(ModBlocks.BISMUTH_STAIRS.get(), Ingredient.of(ModItems.BISMUTH)).group("bismuth")
                 .unlockedBy("has_bismuth", has(ModItems.BISMUTH)).save(this.output);
 
-//        slabBuilder(RecipeCategory.MISC, ModBlocks.BISMUTH_SLAB.get(), Ingredient.of(ModItems.BISMUTH)).group("bismuth")
-//                .unlockedBy("has_bismuth", has(ModItems.BISMUTH)).save(this.output);
         slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BISMUTH_SLAB.get(), ModItems.BISMUTH.get());
 
         buttonBuilder(ModBlocks.BISMUTH_BUTTON.get(), Ingredient.of(ModItems.BISMUTH)).group("bismuth")
@@ -70,6 +68,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
         trapdoorBuilder(ModBlocks.BISMUTH_TRAPDOOR.get(), Ingredient.of(ModItems.BISMUTH)).group("bismuth")
                 .unlockedBy("has_bismuth", has(ModItems.BISMUTH)).save(this.output);
+
     }
     //helper methods so recipes save under tutorialmod instead of minecraft
     protected void oreSmelting(@NotNull List<ItemLike> pIngredients, @NotNull RecipeCategory pCategory, @NotNull ItemLike pResult,

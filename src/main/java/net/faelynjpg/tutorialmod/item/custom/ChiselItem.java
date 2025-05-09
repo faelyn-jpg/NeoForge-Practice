@@ -1,6 +1,7 @@
 package net.faelynjpg.tutorialmod.item.custom;
 
 import net.faelynjpg.tutorialmod.block.ModBlocks;
+import net.faelynjpg.tutorialmod.component.ModDataComponents;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -47,6 +48,8 @@ public class ChiselItem extends Item {
             item -> Objects.requireNonNull(context.getPlayer()).onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
             level.playSound(null, context.getClickedPos(), SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS);
+
+            context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
         }
     }
 
@@ -63,6 +66,11 @@ public class ChiselItem extends Item {
         } else {
             tooltipComponents.add(Component.translatable("tooltip.tutorialmod.chisel"));
         }
+
+        if(stack.get(ModDataComponents.COORDINATES)!= null){
+            tooltipComponents.add(Component.literal("Last Block Changed at " + stack.get(ModDataComponents.COORDINATES)));
+        }
+
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 }

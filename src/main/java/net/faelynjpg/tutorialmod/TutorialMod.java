@@ -1,6 +1,7 @@
 package net.faelynjpg.tutorialmod;
 
 import net.faelynjpg.tutorialmod.block.ModBlocks;
+import net.faelynjpg.tutorialmod.component.ModDataComponents;
 import net.faelynjpg.tutorialmod.item.ModCreativeModeTabs;
 import net.faelynjpg.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -42,6 +43,8 @@ public class TutorialMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModDataComponents.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

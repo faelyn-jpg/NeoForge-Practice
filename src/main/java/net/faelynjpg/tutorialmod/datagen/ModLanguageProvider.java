@@ -26,6 +26,11 @@ public class ModLanguageProvider extends LanguageProvider {
         this.addBlock(ModBlocks.BISMUTH_DOOR, "Bismuth Door");
         this.addBlock(ModBlocks.BISMUTH_TRAPDOOR, "Bismuth Trapdoor");
         this.addBlock(ModBlocks.BISMUTH_LAMP, "Bismuth Lamp");
+        this.addItem(ModItems.BISMUTH_SWORD, "Bismuth Sword");
+        this.addItem(ModItems.BISMUTH_PICKAXE, "Bismuth Pickaxe");
+        this.addItem(ModItems.BISMUTH_AXE, "Bismuth Axe");
+        this.addItem(ModItems.BISMUTH_SHOVEL, "Bismuth Shovel");
+        this.addItem(ModItems.BISMUTH_HOE, "Bismuth Hoe");
 
         this.addItem(ModItems.BISMUTH, "Bismuth");
         this.addItem(ModItems.RAW_BISMUTH, "Raw Bismuth");

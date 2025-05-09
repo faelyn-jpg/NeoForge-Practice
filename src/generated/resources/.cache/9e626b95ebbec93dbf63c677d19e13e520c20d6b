@@ -1,4 +1,4 @@
-// 1.21.4	2025-05-09T13:54:03.284445836	Tags for minecraft:block mod id tutorialmod
+// 1.21.4	2025-05-09T16:03:13.029712993	Tags for minecraft:block mod id tutorialmod
 37b2baa3f7a7af1d877ddc00f32879b419dbaa7b data/minecraft/tags/block/doors.json
 04136d3d9ee4cfece5e370999ba5949334ee6ebb data/minecraft/tags/block/fence_gates.json
 c487c499dafd346e63d23506f4441685ff075db9 data/minecraft/tags/block/fences.json
@@ -7,3 +7,5 @@ c487c499dafd346e63d23506f4441685ff075db9 data/minecraft/tags/block/mineable/axe.
 97d474d4f27815bfe6976eb57db6a426233ba113 data/minecraft/tags/block/needs_iron_tool.json
 7e021a949df925be7757abcdfb45aeea5ae602d5 data/minecraft/tags/block/trapdoors.json
 dee44ae6bac101c5758964e859998d60a7ba7674 data/minecraft/tags/block/walls.json
+01d3b81dc0d7fef99f351a4699b8cbb9c43de41b data/tutorialmod/tags/block/incorrect_for_bismuth_tool.json
+32b13946c4cd1f944b029659ccce5fcb2adad4ff data/tutorialmod/tags/block/needs_bismuth_tool.json

@@ -42,6 +42,12 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.STARLIGHT_ASHES.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.FROSTFIRE_ICE.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ModItems.CHISEL.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.BISMUTH_SWORD.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.BISMUTH_PICKAXE.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.BISMUTH_AXE.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.BISMUTH_SHOVEL.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.BISMUTH_HOE.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
+
 
         blockModels.familyWithExistingFullBlock(BISMUTH_BLOCK).stairs(ModBlocks.BISMUTH_STAIRS.get());
         blockModels.familyWithExistingFullBlock(BISMUTH_BLOCK).slab(ModBlocks.BISMUTH_SLAB.get());
@@ -56,6 +62,7 @@ public class ModModelProvider extends ModelProvider {
         doorWithRenderType(blockModels, ModBlocks.BISMUTH_DOOR.get());
         trapdoorWithRenderType(blockModels, ModBlocks.BISMUTH_TRAPDOOR.get());
         customLamp(blockModels, ModBlocks.BISMUTH_LAMP.get());
+
 
     }
 
