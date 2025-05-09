@@ -7,16 +7,18 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 
+import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.model.ModelTemplates;
 
 
 import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.client.data.models.model.TexturedModel;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
-import static net.minecraft.client.data.models.BlockModelGenerators.createDoor;
-import static net.minecraft.client.data.models.BlockModelGenerators.createOrientableTrapdoor;
+import static net.minecraft.client.data.models.BlockModelGenerators.*;
 
 
 public class ModModelProvider extends ModelProvider {
@@ -53,7 +55,7 @@ public class ModModelProvider extends ModelProvider {
 
         doorWithRenderType(blockModels, ModBlocks.BISMUTH_DOOR.get());
         trapdoorWithRenderType(blockModels, ModBlocks.BISMUTH_TRAPDOOR.get());
-
+        customLamp(blockModels, ModBlocks.BISMUTH_LAMP.get());
 
     }
 
@@ -80,6 +82,16 @@ public class ModModelProvider extends ModelProvider {
         blockModels.registerSimpleItemModel(block, resourcelocation1);
         blockModels.blockStateOutput.accept(createOrientableTrapdoor(block, resourcelocation, resourcelocation1, resourcelocation2));
 
+    }
+
+    private void customLamp(BlockModelGenerators blockModel, Block block) {
+        ResourceLocation resourcelocation = TexturedModel.CUBE.create(block, blockModel.modelOutput);
+        ResourceLocation resourcelocation1 = blockModel.createSuffixedVariant(block, "_on", ModelTemplates.CUBE_ALL, TextureMapping::cube);
+        blockModel.blockStateOutput
+                .accept(
+                        MultiVariantGenerator.multiVariant(block)
+                                .with(createBooleanModelDispatch(BlockStateProperties.LIT, resourcelocation1, resourcelocation))
+                );
     }
 
 

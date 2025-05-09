@@ -27,7 +27,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BISMUTH_DOOR.get())
                 .add(ModBlocks.BISMUTH_TRAPDOOR.get())
                 .add(ModBlocks.BISMUTH_PRESSURE_PLATE.get())
-                .add(ModBlocks.BISMUTH_BUTTON.get());
+                .add(ModBlocks.BISMUTH_BUTTON.get())
+                .add(ModBlocks.BISMUTH_LAMP.get());
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.BISMUTH_FENCE.get());
         tag(BlockTags.NEEDS_IRON_TOOL)

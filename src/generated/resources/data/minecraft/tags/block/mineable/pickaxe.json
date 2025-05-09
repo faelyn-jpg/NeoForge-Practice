@@ -9,6 +9,7 @@
     "tutorialmod:bismuth_door",
     "tutorialmod:bismuth_trapdoor",
     "tutorialmod:bismuth_pressure_plate",
-    "tutorialmod:bismuth_button"
+    "tutorialmod:bismuth_button",
+    "tutorialmod:bismuth_lamp"
   ]
 }

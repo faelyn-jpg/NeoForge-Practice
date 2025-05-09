@@ -1,6 +1,7 @@
 package net.faelynjpg.tutorialmod.block;
 
 import net.faelynjpg.tutorialmod.TutorialMod;
+import net.faelynjpg.tutorialmod.block.custom.BismuthLampBlock;
 import net.faelynjpg.tutorialmod.block.custom.MagicBlock;
 import net.faelynjpg.tutorialmod.item.ModItems;
 import net.minecraft.core.registries.Registries;
@@ -89,6 +90,13 @@ public class ModBlocks {
                     BlockBehaviour.Properties.of()
                             .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse("tutorialmod:bismuth_trapdoor")))
                             .strength(2f).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final DeferredBlock<Block> BISMUTH_LAMP = registerBlock("bismuth_lamp",
+            () -> new BismuthLampBlock(BlockBehaviour.Properties.of()
+                    .setId(ResourceKey.create(Registries.BLOCK, ResourceLocation.parse("tutorialmod:bismuth_lamp")))
+                    .strength(2f).requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(BismuthLampBlock.LIT) ? 15 : 0)));
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
