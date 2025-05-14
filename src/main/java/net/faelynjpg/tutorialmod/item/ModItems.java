@@ -80,23 +80,23 @@ public class ModItems {
                     .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth_hammer"))) ));
 
     public static final DeferredItem<ArmorItem> BISMUTH_HELMET = ITEMS.registerItem("bismuth_helmet", (props) ->
-            new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.HELMET, new Item.Properties()
+            new ModArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.HELMET, new Item.Properties()
                     .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth_helmet")))
                     .durability(ArmorType.HELMET.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> BISMUTH_CHESTPLATE = ITEMS.registerItem("bismuth_chestplate", (props) ->
-            new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.CHESTPLATE, new Item.Properties()
+            new ModArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.CHESTPLATE, new Item.Properties()
                     .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth_chestplate")))
                     .durability(ArmorType.CHESTPLATE.getDurability(19))));
 
     public static final DeferredItem<ArmorItem> BISMUTH_LEGGINGS = ITEMS.registerItem("bismuth_leggings", (props) ->
-            new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.LEGGINGS, new Item.Properties()
+            new ModArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.LEGGINGS, new Item.Properties()
                     .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth_leggings")))
                     .durability(ArmorType.LEGGINGS.getDurability(19))));
 
 
     public static final DeferredItem<ArmorItem> BISMUTH_BOOTS = ITEMS.registerItem("bismuth_boots", (props) ->
-            new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.BOOTS, new Item.Properties()
+            new ModArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.BOOTS, new Item.Properties()
                     .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth_boots")))
                     .durability(ArmorType.BOOTS.getDurability(19))));
 

@@ -2,6 +2,7 @@ package net.faelynjpg.tutorialmod.item.custom;
 
 import net.faelynjpg.tutorialmod.util.ModTags;
 import net.minecraft.Util;
+
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorMaterials;
@@ -17,5 +18,7 @@ public class ModArmorMaterials implements ArmorMaterials {
         p_371743_.put(ArmorType.HELMET, 5);
         p_371743_.put(ArmorType.BODY, 11);
     }), 16, SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0F, 0.1F, ModTags.Items.REPAIRS_BISMUTH_ARMOR, ModEquipmentAssets.BISMUTH);
+
+
 
 }
