@@ -3,6 +3,7 @@ package net.faelynjpg.tutorialmod.datagen;
 import net.faelynjpg.tutorialmod.block.ModBlocks;
 import net.faelynjpg.tutorialmod.item.ModItems;
 
+import net.faelynjpg.tutorialmod.item.custom.ModEquipmentAssets;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
@@ -47,6 +48,12 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.BISMUTH_AXE.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.BISMUTH_SHOVEL.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.BISMUTH_HOE.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModels.generateFlatItem(ModItems.BISMUTH_HAMMER.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        itemModels.generateTrimmableItem(ModItems.BISMUTH_HELMET.get(), ModEquipmentAssets.BISMUTH, "helmet", false);
+        itemModels.generateTrimmableItem(ModItems.BISMUTH_CHESTPLATE.get(), ModEquipmentAssets.BISMUTH, "chestplate", false);
+        itemModels.generateTrimmableItem(ModItems.BISMUTH_LEGGINGS.get(), ModEquipmentAssets.BISMUTH, "leggings", false);
+        itemModels.generateTrimmableItem(ModItems.BISMUTH_BOOTS.get(), ModEquipmentAssets.BISMUTH, "boots", false);
 
 
         blockModels.familyWithExistingFullBlock(BISMUTH_BLOCK).stairs(ModBlocks.BISMUTH_STAIRS.get());
@@ -65,6 +72,7 @@ public class ModModelProvider extends ModelProvider {
 
 
     }
+
 
     private void doorWithRenderType(BlockModelGenerators blockModels, Block block) {
         TextureMapping texturemapping = TextureMapping.door(block);

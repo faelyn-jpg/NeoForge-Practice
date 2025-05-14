@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "tutorialmod:bismuth"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "tutorialmod:bismuth"
+      }
+    ]
+  }
+}

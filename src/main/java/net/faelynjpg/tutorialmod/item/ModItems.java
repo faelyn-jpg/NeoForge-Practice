@@ -1,8 +1,7 @@
 package net.faelynjpg.tutorialmod.item;
 
 import net.faelynjpg.tutorialmod.TutorialMod;
-import net.faelynjpg.tutorialmod.item.custom.ChiselItem;
-import net.faelynjpg.tutorialmod.item.custom.FuelItem;
+import net.faelynjpg.tutorialmod.item.custom.*;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -13,6 +12,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
+import net.minecraft.world.item.equipment.ArmorType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -75,6 +75,30 @@ public class ModItems {
     public static final DeferredItem<HoeItem> BISMUTH_HOE = ITEMS.registerItem("bismuth_hoe", (props) ->
             new HoeItem(ModToolMaterials.BISMUTH, 0f, -3.2f, new Item.Properties()
                     .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth_hoe"))) ));
+    public static final DeferredItem<HammerItem> BISMUTH_HAMMER = ITEMS.registerItem("bismuth_hammer", (props) ->
+            new HammerItem(ModToolMaterials.BISMUTH, 7f, -3.5f, new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth_hammer"))) ));
+
+    public static final DeferredItem<ArmorItem> BISMUTH_HELMET = ITEMS.registerItem("bismuth_helmet", (props) ->
+            new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.HELMET, new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth_helmet")))
+                    .durability(ArmorType.HELMET.getDurability(19))));
+
+    public static final DeferredItem<ArmorItem> BISMUTH_CHESTPLATE = ITEMS.registerItem("bismuth_chestplate", (props) ->
+            new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.CHESTPLATE, new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth_chestplate")))
+                    .durability(ArmorType.CHESTPLATE.getDurability(19))));
+
+    public static final DeferredItem<ArmorItem> BISMUTH_LEGGINGS = ITEMS.registerItem("bismuth_leggings", (props) ->
+            new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.LEGGINGS, new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth_leggings")))
+                    .durability(ArmorType.LEGGINGS.getDurability(19))));
+
+
+    public static final DeferredItem<ArmorItem> BISMUTH_BOOTS = ITEMS.registerItem("bismuth_boots", (props) ->
+            new ArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, ArmorType.BOOTS, new Item.Properties()
+                    .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth_boots")))
+                    .durability(ArmorType.BOOTS.getDurability(19))));
 
 
     public static void register(IEventBus eventBus) {

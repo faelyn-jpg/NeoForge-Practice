@@ -1,8 +1,5 @@
 package net.faelynjpg.tutorialmod.datagen;
 
-import net.faelynjpg.tutorialmod.TutorialMod;
-
-
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.LootTableProvider;
 
@@ -19,7 +16,9 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 import java.util.Set;
 
-@EventBusSubscriber(modid = TutorialMod.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+import static net.faelynjpg.tutorialmod.TutorialMod.MOD_ID;
+
+@EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 
 public class DataGenerators {
 
@@ -40,6 +39,8 @@ public class DataGenerators {
                return new ModRecipeProvider(provider, output);
            }
        } );
+
+       event.createProvider(ModEquipmentAssetProvider::new);
        event.createProvider(ModModelProvider::new);
        BlockTagsProvider blockTagsProvider = event.createProvider(ModBlockTagProvider::new);
         event.createProvider((output, lookupProvider) ->  new ModItemTagProvider(
@@ -47,7 +48,7 @@ public class DataGenerators {
         ));
         event.createProvider(ModDataMapProvider::new);
         event.createProvider(ModLanguageProvider::new);
-    }
 
+    }
 
 }
