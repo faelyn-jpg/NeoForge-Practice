@@ -1,4 +1,4 @@
-// 1.21.4	2025-05-13T16:49:59.824391723	Model Definitions - tutorialmod
+// 1.21.4	2025-05-15T14:23:11.773772067	Model Definitions - tutorialmod
 fc4b73d7d5429cd1c496b45459a243216fd5ce35 assets/tutorialmod/blockstates/bismuth_block.json
 12833e7b89e5c0f2e9106085dcf9d9e11cf75b57 assets/tutorialmod/blockstates/bismuth_button.json
 b4895c3f5396f7c4c029762f48f46f1369cf5748 assets/tutorialmod/blockstates/bismuth_deepslate_ore.json
@@ -26,6 +26,7 @@ a24b3c88402cd29c7fe583a39655af97de937241 assets/tutorialmod/items/bismuth_fence_
 8b1846b2ee0ddc9fc0260dae98c2036e71c197e3 assets/tutorialmod/items/bismuth_hammer.json
 15ea4b81c8b9d717b9f1b57f28f3cdbdad39d57f assets/tutorialmod/items/bismuth_helmet.json
 d89e9c8f52f328acac35165ddde03713ff9a662b assets/tutorialmod/items/bismuth_hoe.json
+8baaa12b40ee7f5617a36ab4fe8d22ecf4e6ecf8 assets/tutorialmod/items/bismuth_horse_armor.json
 003b5812c6b22a234145a0d8ecbe6637d0458489 assets/tutorialmod/items/bismuth_lamp.json
 a1878ecd6ec1ec91a0c4b21595490b3a16f78297 assets/tutorialmod/items/bismuth_leggings.json
 f47371f59494db667042f0e9e83aa6fd435e2c09 assets/tutorialmod/items/bismuth_ore.json
@@ -122,6 +123,7 @@ ddad6f465ce706fac9e60b45f2c8c15b8c16e7b6 assets/tutorialmod/models/item/bismuth_
 245743abbfa71ae70e3f413db15f78696bf6db92 assets/tutorialmod/models/item/bismuth_helmet_redstone_trim.json
 e778525dc310522753bf7f2c921f7358ce2885b1 assets/tutorialmod/models/item/bismuth_helmet_resin_trim.json
 f57f83e8e1a08f41ed211c885d17979106a5833a assets/tutorialmod/models/item/bismuth_hoe.json
+dd9f2f6dcd1bf8ebee37a6a144f94a26a42755ee assets/tutorialmod/models/item/bismuth_horse_armor.json
 a7e46b1ea2b1518b1940fdc1eb004bc2d06eee93 assets/tutorialmod/models/item/bismuth_leggings.json
 1160a0514b34636266c7f2d76b1d0633b6e5634e assets/tutorialmod/models/item/bismuth_leggings_amethyst_trim.json
 7730d2fa38a7a7552914fc8b7d1076d5e20a8c21 assets/tutorialmod/models/item/bismuth_leggings_copper_trim.json

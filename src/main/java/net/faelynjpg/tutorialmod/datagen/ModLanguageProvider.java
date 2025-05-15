@@ -36,7 +36,7 @@ public class ModLanguageProvider extends LanguageProvider {
         this.addItem(ModItems.BISMUTH_CHESTPLATE ,"Bismuth Chestplate");
         this.addItem(ModItems.BISMUTH_LEGGINGS ,"Bismuth Leggings");
         this.addItem(ModItems.BISMUTH_BOOTS ,"Bismuth Boots");
-
+        this.addItem(ModItems.BISMUTH_HORSE_ARMOR, "Horse Armor");
 
         this.addItem(ModItems.BISMUTH, "Bismuth");
         this.addItem(ModItems.RAW_BISMUTH, "Raw Bismuth");
@@ -44,6 +44,7 @@ public class ModLanguageProvider extends LanguageProvider {
         this.addItem(ModItems.RADISH, "Radish");
         this.addItem(ModItems.FROSTFIRE_ICE, "Frostfire Ice");
         this.addItem(ModItems.STARLIGHT_ASHES, "Starlight Ashes");
+
         add("tooltip.tutorialmod.magic_block.tooltip", "This block is very §9magical!§r");
         add("tooltip.tutorialmod.chisel.shift_down","This item can chisel Blocks into Bricks");
         add("tooltip.tutorialmod.chisel","Press §eShift§r for more information");

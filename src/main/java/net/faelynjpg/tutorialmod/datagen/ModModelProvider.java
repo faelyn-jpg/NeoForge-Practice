@@ -55,6 +55,8 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateTrimmableItem(ModItems.BISMUTH_LEGGINGS.get(), ModEquipmentAssets.BISMUTH, "leggings", false);
         itemModels.generateTrimmableItem(ModItems.BISMUTH_BOOTS.get(), ModEquipmentAssets.BISMUTH, "boots", false);
 
+        itemModels.generateFlatItem(ModItems.BISMUTH_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
+
 
         blockModels.familyWithExistingFullBlock(BISMUTH_BLOCK).stairs(ModBlocks.BISMUTH_STAIRS.get());
         blockModels.familyWithExistingFullBlock(BISMUTH_BLOCK).slab(ModBlocks.BISMUTH_SLAB.get());

@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Optional;
 import java.util.function.BiConsumer;
 
 public class ModEquipmentAssetProvider extends EquipmentAssetProvider {
@@ -23,7 +24,7 @@ public class ModEquipmentAssetProvider extends EquipmentAssetProvider {
         ResourceLocation bismuthID = ResourceLocation.fromNamespaceAndPath("tutorialmod", "bismuth");
 
         builder.addHumanoidLayers(bismuthID);
-
+        builder.addLayers(EquipmentClientInfo.LayerType.HORSE_BODY, new EquipmentClientInfo.Layer(bismuthID, Optional.empty(), false ));
         output.accept(ModEquipmentAssets.BISMUTH, builder.build());
 
 
