@@ -39,7 +39,7 @@ public class DataGenerators {
                return new ModRecipeProvider(provider, output);
            }
        } );
-
+        event.createProvider(ModDatapackProvider::new);
        event.createProvider(ModEquipmentAssetProvider::new);
        event.createProvider(ModModelProvider::new);
        BlockTagsProvider blockTagsProvider = event.createProvider(ModBlockTagProvider::new);

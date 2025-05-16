@@ -12,7 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.equipment.trim.TrimPattern;
 import net.minecraft.world.item.equipment.trim.TrimPatterns;
-import net.neoforged.neoforge.registries.DeferredItem;
+
 
 public class ModTrimPatterns extends TrimPatterns {
     public static final ResourceKey<TrimPattern> KAUPEN = ResourceKey.create(Registries.TRIM_PATTERN,

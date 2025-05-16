@@ -30,32 +30,13 @@ public class ModModelProvider extends ModelProvider {
 
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 
+        new ModItemModelGenerator(itemModels.itemModelOutput, itemModels.modelOutput).run();
+
         Block BISMUTH_BLOCK = ModBlocks.BISMUTH_BLOCK.get();
         blockModels.createTrivialCube(BISMUTH_BLOCK);
         blockModels.createTrivialCube(ModBlocks.BISMUTH_ORE.get());
         blockModels.createTrivialCube(ModBlocks.BISMUTH_DEEPSLATE_ORE.get());
         blockModels.createTrivialCube(ModBlocks.MAGIC_BLOCK.get());
-
-        itemModels.generateFlatItem(ModItems.BISMUTH.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.RAW_BISMUTH.get(), ModelTemplates.FLAT_ITEM);
-
-        itemModels.generateFlatItem(ModItems.RADISH.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.STARLIGHT_ASHES.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.FROSTFIRE_ICE.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.CHISEL.get(), ModelTemplates.FLAT_ITEM);
-        itemModels.generateFlatItem(ModItems.BISMUTH_SWORD.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModels.generateFlatItem(ModItems.BISMUTH_PICKAXE.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModels.generateFlatItem(ModItems.BISMUTH_AXE.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModels.generateFlatItem(ModItems.BISMUTH_SHOVEL.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModels.generateFlatItem(ModItems.BISMUTH_HOE.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
-        itemModels.generateFlatItem(ModItems.BISMUTH_HAMMER.get() , ModelTemplates.FLAT_HANDHELD_ITEM);
-
-        itemModels.generateTrimmableItem(ModItems.BISMUTH_HELMET.get(), ModEquipmentAssets.BISMUTH, "helmet", false);
-        itemModels.generateTrimmableItem(ModItems.BISMUTH_CHESTPLATE.get(), ModEquipmentAssets.BISMUTH, "chestplate", false);
-        itemModels.generateTrimmableItem(ModItems.BISMUTH_LEGGINGS.get(), ModEquipmentAssets.BISMUTH, "leggings", false);
-        itemModels.generateTrimmableItem(ModItems.BISMUTH_BOOTS.get(), ModEquipmentAssets.BISMUTH, "boots", false);
-
-        itemModels.generateFlatItem(ModItems.BISMUTH_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
 
 
         blockModels.familyWithExistingFullBlock(BISMUTH_BLOCK).stairs(ModBlocks.BISMUTH_STAIRS.get());

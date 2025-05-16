@@ -1,4 +1,4 @@
-// 1.21.4	2025-05-15T14:23:11.773772067	Model Definitions - tutorialmod
+// 1.21.4	2025-05-16T15:29:45.602725769	Model Definitions - tutorialmod
 fc4b73d7d5429cd1c496b45459a243216fd5ce35 assets/tutorialmod/blockstates/bismuth_block.json
 12833e7b89e5c0f2e9106085dcf9d9e11cf75b57 assets/tutorialmod/blockstates/bismuth_button.json
 b4895c3f5396f7c4c029762f48f46f1369cf5748 assets/tutorialmod/blockstates/bismuth_deepslate_ore.json
@@ -40,6 +40,7 @@ a3a93de0b88e48048e4ab0e9bf5a08e3130ee376 assets/tutorialmod/items/bismuth_pressu
 8a4b976263eb844b731c417f72893abb1009b825 assets/tutorialmod/items/bismuth_wall.json
 6532b13e9970a4636c6134c204dcb557ebe91561 assets/tutorialmod/items/chisel.json
 a0c4b5756a5d625ef28c25b56228ee0395d0fcbb assets/tutorialmod/items/frostfire_ice.json
+a0295b2187148d078f36ff66a63327d11ff960c2 assets/tutorialmod/items/kaupen_armor_trim_smithing_template.json
 8fe54fac0d8b2763fdecd5fd624085c91405390a assets/tutorialmod/items/magic_block.json
 1e29de5b2b858adc85b9a1e43a788bb41daad59f assets/tutorialmod/items/radish.json
 de7938f43e0a9a9a48de52d1b5cfc460bec98dec assets/tutorialmod/items/raw_bismuth.json
@@ -141,6 +142,7 @@ a54afda44eb7250175edad834ef386f45087b341 assets/tutorialmod/models/item/bismuth_
 0736b6b1901b96547aff24d557c219e802b62af8 assets/tutorialmod/models/item/bismuth_sword.json
 69a45d9eda7fcbbb46f3a4bf568243a7b2141123 assets/tutorialmod/models/item/chisel.json
 91ec90598690688b7129cd5976415ae5158e72d3 assets/tutorialmod/models/item/frostfire_ice.json
+449182fb0ac0479cfb756ef062a8c183fc5a3c2a assets/tutorialmod/models/item/kaupen_armor_trim_smithing_template.json
 f4c84ba8717deb3f252eef0b2e0833f60e735029 assets/tutorialmod/models/item/radish.json
 4632490c178511af06a636377c35e6caf64df3f1 assets/tutorialmod/models/item/raw_bismuth.json
 fa9080666ba4e3910d0814ec35a3e300f861fb1c assets/tutorialmod/models/item/starlight_ashes.json
