@@ -104,6 +104,8 @@ public class ModItems {
     public static final DeferredItem<Item> BISMUTH_HORSE_ARMOR = ITEMS.registerItem("bismuth_horse_armor", props -> new AnimalArmorItem(ModArmorMaterials.BISMUTH_ARMOR_MATERIAL, AnimalArmorItem.BodyType.EQUESTRIAN,  props
             .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "bismuth_horse_armor")))
             .stacksTo(1)));
+    public static final DeferredItem<Item> KAUPEN_SMITHING_TEMPLATE = ITEMS.registerItem("kaupen_armor_trim_smithing_template", SmithingTemplateItem::createArmorTrimTemplate);
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
