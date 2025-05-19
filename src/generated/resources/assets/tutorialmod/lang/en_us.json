@@ -35,5 +35,7 @@
   "tooltip.tutorialmod.chisel": "Press §eShift§r for more information",
   "tooltip.tutorialmod.chisel.shift_down": "This item can chisel Blocks into Bricks",
   "tooltip.tutorialmod.magic_block.tooltip": "This block is very §9magical!§r",
-  "tooltip.tutorialmod.radish.tooltip": "Tastes really great!"
+  "tooltip.tutorialmod.radish.tooltip": "Tastes really great!",
+  "trim_material.tutorialmod.bismuth": "Bismuth Armor Material",
+  "trim_pattern.tutorialmod.kaupen": "Kaupen Armor Trim"
 }

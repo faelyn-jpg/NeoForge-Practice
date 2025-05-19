@@ -106,6 +106,21 @@ public class ModItems {
             .stacksTo(1)));
     public static final DeferredItem<Item> KAUPEN_SMITHING_TEMPLATE = ITEMS.registerItem("kaupen_armor_trim_smithing_template", SmithingTemplateItem::createArmorTrimTemplate);
 
+//    public static final DeferredItem<Item> KAUPEN_SMITHING_TEMPLATE = ITEMS.registerItem("kaupen_armor_trim_smithing_template", (props) -> new SmithingTemplateItem(
+//            Component.translatable(Util.makeDescriptionId("item", ResourceLocation.withDefaultNamespace("item.tutorialmod.kaupen_smithing_template.applies_to"))),
+//            Component.translatable(Util.makeDescriptionId("item", ResourceLocation.withDefaultNamespace("item.tutorialmod.kaupen_smithing_template.ingredients"))),
+//            Component.translatable(Util.makeDescriptionId("item", ResourceLocation.withDefaultNamespace("item.tutorialmod.kaupen_smithing_template"))),
+//                    Component.translatable(Util.makeDescriptionId("item", ResourceLocation.withDefaultNamespace("item.tutorialmod.kaupen_smithing_template.description"))),
+//            List.of(
+//                    ResourceLocation.withDefaultNamespace("item/empty_armor_slot_helmet"),
+//                    ResourceLocation.withDefaultNamespace("item/empty_armor_slot_chestplate"),
+//                    ResourceLocation.withDefaultNamespace("item/empty_armor_slot_leggings"),
+//                    ResourceLocation.withDefaultNamespace("item/empty_armor_slot_boots")
+//            ),
+//            List.of(ResourceLocation.withDefaultNamespace("item/empty_slot_ingot")),
+//            props
+//    ));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

@@ -39,6 +39,9 @@ public class DataGenerators {
                return new ModRecipeProvider(provider, output);
            }
        } );
+       event.createProvider(ModDataMapProvider::new);
+        event.createProvider(ModLanguageProvider::new);
+       event.createProvider(ModAtlasesProvider::new);
         event.createProvider(ModDatapackProvider::new);
        event.createProvider(ModEquipmentAssetProvider::new);
        event.createProvider(ModModelProvider::new);
@@ -46,8 +49,7 @@ public class DataGenerators {
         event.createProvider((output, lookupProvider) ->  new ModItemTagProvider(
                 output, lookupProvider, blockTagsProvider.contentsGetter()
         ));
-        event.createProvider(ModDataMapProvider::new);
-        event.createProvider(ModLanguageProvider::new);
+
 
     }
 

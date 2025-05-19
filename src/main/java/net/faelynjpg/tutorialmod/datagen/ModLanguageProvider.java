@@ -51,6 +51,8 @@ public class ModLanguageProvider extends LanguageProvider {
         add("tooltip.tutorialmod.radish.tooltip","Tastes really great!");
         add("creativetab.tutorialmod.bismuth_items","Bismuth Items");
         add("creativetab.tutorialmod.bismuth_blocks","Bismuth Blocks");
+        add("trim_pattern.tutorialmod.kaupen", "Kaupen Armor Trim");
+        add("trim_material.tutorialmod.bismuth", "Bismuth Armor Material");
 
 
     }

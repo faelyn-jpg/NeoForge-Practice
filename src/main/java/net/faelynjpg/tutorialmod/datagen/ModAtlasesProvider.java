@@ -1,6 +1,7 @@
 package net.faelynjpg.tutorialmod.datagen;
 
 import net.faelynjpg.tutorialmod.TutorialMod;
+import net.minecraft.client.renderer.texture.atlas.sources.DirectoryLister;
 import net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -66,8 +67,9 @@ public class ModAtlasesProvider extends SpriteSourceProvider {
             ResourceLocation.withDefaultNamespace("trims/entity/humanoid_leggings/flow"),
             ResourceLocation.withDefaultNamespace("trims/entity/humanoid/bolt"),
             ResourceLocation.withDefaultNamespace("trims/entity/humanoid_leggings/bolt"),
-            ResourceLocation.withDefaultNamespace("trims/entity/humanoid/kaupen"),
-            ResourceLocation.withDefaultNamespace("trims/entity/humanoid_leggings/kaupen")
+            ResourceLocation.fromNamespaceAndPath("tutorialmod", "trims/entity/humanoid/kaupen"),
+            ResourceLocation.fromNamespaceAndPath("tutorialmod", "trims/entity/humanoid_leggings/kaupen")
+
     );
 
     @Override
@@ -81,6 +83,7 @@ public class ModAtlasesProvider extends SpriteSourceProvider {
                 trimTextures,
                 ResourceLocation.withDefaultNamespace("trims/color_palettes/trim_palette"),
                 permutations
-        ));
+        )).addSource(new DirectoryLister("trims/entity/humanoid", TutorialMod.MOD_ID + "trims/entity/humanoid"));
+        atlas(ResourceLocation.fromNamespaceAndPath("minecraft", "patterns")).addSource(new DirectoryLister("trims/patterns", TutorialMod.MOD_ID + ":trims/pattern"));
     }
 }

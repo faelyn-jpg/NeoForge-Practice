@@ -48,5 +48,9 @@ public class ModItemTagProvider extends ItemTagsProvider {
     tag(ModTags.Items.REPAIRS_BISMUTH_ARMOR)
             .add(ModItems.BISMUTH.get());
 
+    this.tag(ItemTags.TRIM_MATERIALS)
+            .add(ModItems.BISMUTH.get());
+
+
     }
 }

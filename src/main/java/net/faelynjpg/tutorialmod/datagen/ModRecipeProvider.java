@@ -6,12 +6,10 @@ import net.faelynjpg.tutorialmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.recipes.*;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.item.crafting.BlastingRecipe;
-import net.minecraft.world.item.crafting.SmeltingRecipe;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
@@ -21,6 +19,9 @@ public class ModRecipeProvider extends RecipeProvider {
     protected ModRecipeProvider(HolderLookup.Provider provider, RecipeOutput output) {
         super(provider, output);
     }
+
+    public static final ResourceKey<Recipe<?>> KAUPEN =
+            ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID, "kaupen"));
 
     @Override
     protected void buildRecipes() {
@@ -68,6 +69,10 @@ public class ModRecipeProvider extends RecipeProvider {
 
         trapdoorBuilder(ModBlocks.BISMUTH_TRAPDOOR.get(), Ingredient.of(ModItems.BISMUTH)).group("bismuth")
                 .unlockedBy("has_bismuth", has(ModItems.BISMUTH)).save(this.output);
+
+
+
+        trimSmithing(ModItems.KAUPEN_SMITHING_TEMPLATE.get(), KAUPEN);
 
     }
     //helper methods so recipes save under tutorialmod instead of minecraft
