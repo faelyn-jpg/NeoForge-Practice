@@ -1,4 +1,4 @@
-package net.faelynjpg.tutorialmod.datagen;
+package net.faelynjpg.tutorialmod.datagen.tags;
 
 import net.faelynjpg.tutorialmod.TutorialMod;
 import net.faelynjpg.tutorialmod.item.ModItems;

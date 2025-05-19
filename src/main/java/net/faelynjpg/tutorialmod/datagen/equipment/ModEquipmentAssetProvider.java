@@ -1,4 +1,4 @@
-package net.faelynjpg.tutorialmod.datagen;
+package net.faelynjpg.tutorialmod.datagen.equipment;
 
 import net.faelynjpg.tutorialmod.item.custom.ModEquipmentAssets;
 import net.minecraft.client.data.models.EquipmentAssetProvider;

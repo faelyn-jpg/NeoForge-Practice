@@ -1,4 +1,4 @@
-package net.faelynjpg.tutorialmod.datagen;
+package net.faelynjpg.tutorialmod.datagen.loot;
 
 import net.faelynjpg.tutorialmod.block.ModBlocks;
 import net.faelynjpg.tutorialmod.item.ModItems;
@@ -22,7 +22,7 @@ import java.util.Set;
 
 
 public class ModBlockLootTable extends BlockLootSubProvider {
-    protected ModBlockLootTable(HolderLookup.Provider lookupProvider) {
+    public ModBlockLootTable(HolderLookup.Provider lookupProvider) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), lookupProvider);
 
     }

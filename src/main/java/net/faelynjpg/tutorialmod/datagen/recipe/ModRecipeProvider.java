@@ -1,4 +1,4 @@
-package net.faelynjpg.tutorialmod.datagen;
+package net.faelynjpg.tutorialmod.datagen.recipe;
 
 import net.faelynjpg.tutorialmod.TutorialMod;
 import net.faelynjpg.tutorialmod.block.ModBlocks;
@@ -16,7 +16,7 @@ import java.util.List;
 
 
 public class ModRecipeProvider extends RecipeProvider {
-    protected ModRecipeProvider(HolderLookup.Provider provider, RecipeOutput output) {
+    public ModRecipeProvider(HolderLookup.Provider provider, RecipeOutput output) {
         super(provider, output);
     }
 

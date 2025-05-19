@@ -1,5 +1,11 @@
 package net.faelynjpg.tutorialmod.datagen;
 
+import net.faelynjpg.tutorialmod.datagen.atlases.ModAtlasesProvider;
+import net.faelynjpg.tutorialmod.datagen.equipment.ModEquipmentAssetProvider;
+import net.faelynjpg.tutorialmod.datagen.loot.ModBlockLootTable;
+import net.faelynjpg.tutorialmod.datagen.models.ModModelProvider;
+import net.faelynjpg.tutorialmod.datagen.recipe.ModRecipeProvider;
+import net.faelynjpg.tutorialmod.datagen.tags.ModItemTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.LootTableProvider;
 

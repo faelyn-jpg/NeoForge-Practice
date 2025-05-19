@@ -1,9 +1,7 @@
-package net.faelynjpg.tutorialmod.datagen;
+package net.faelynjpg.tutorialmod.datagen.models;
 
 import net.faelynjpg.tutorialmod.block.ModBlocks;
-import net.faelynjpg.tutorialmod.item.ModItems;
 
-import net.faelynjpg.tutorialmod.item.custom.ModEquipmentAssets;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;

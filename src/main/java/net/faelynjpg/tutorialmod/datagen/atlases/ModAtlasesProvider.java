@@ -1,4 +1,4 @@
-package net.faelynjpg.tutorialmod.datagen;
+package net.faelynjpg.tutorialmod.datagen.atlases;
 
 import net.faelynjpg.tutorialmod.TutorialMod;
 import net.minecraft.client.renderer.texture.atlas.sources.DirectoryLister;

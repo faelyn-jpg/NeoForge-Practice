@@ -1,4 +1,4 @@
-package net.faelynjpg.tutorialmod.datagen;
+package net.faelynjpg.tutorialmod.datagen.models;
 
 import net.faelynjpg.tutorialmod.item.ModItems;
 import net.faelynjpg.tutorialmod.item.custom.ModEquipmentAssets;
